@@ -1,14 +1,14 @@
 {
-  "name": "react-scripts",
-  "version": "2.1.8",
+  "name": "sammffl-react-scripts",
+  "version": "3.0.7",
   "description": "Configuration and scripts for Create React App.",
-  "repository": "facebook/create-react-app",
+  "repository": "sammffl/create-react-app",
   "license": "MIT",
   "engines": {
     "node": ">=8.10"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/sammffl/create-react-app/issues"
   },
   "files": [
     "bin",
@@ -69,7 +69,11 @@
     "webpack": "4.28.3",
     "webpack-dev-server": "3.1.14",
     "webpack-manifest-plugin": "2.0.4",
-    "workbox-webpack-plugin": "3.6.3"
+    "workbox-webpack-plugin": "3.6.3",
+    "react-loadable": "^5.5.0",
+    "react-router-dom": "^5.0.0",
+    "react-styleguidist": "^9.0.4",
+    "node-sass": "^4.11.0"
   },
   "devDependencies": {
     "react": "^16.3.2",
