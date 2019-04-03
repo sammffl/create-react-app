@@ -96,8 +96,8 @@ module.exports = function (
   // Setup the script rules
   appPackage.scripts = {
     start: 'react-scripts start',
-    testBuild: 'PUBLIC_URL=./ react-scripts build',
-    proBuild: 'PUBLIC_URL=./ react-scripts build',
+    testBuild: 'PUBLIC_URL=./ GENERATE_SOURCEMAP=true react-scripts build',
+    proBuild: 'PUBLIC_URL=./ GENERATE_SOURCEMAP=false react-scripts build',
     build: 'react-scripts build',
     test: 'react-scripts test',
     eject: 'react-scripts eject',
@@ -170,7 +170,7 @@ module.exports = function (
     args = ['install', '--save', verbose && '--verbose'].filter (e => e);
   }
 
-  args.push ('react', 'react-dom');
+  args.push ('react', 'react-dom', 'react-loadable');
 
   // Install additional template dependencies, if present
   const templateDependenciesPath = path.join (

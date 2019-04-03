@@ -1,0 +1,11 @@
+{
+    "dependencies": {
+        "react-loadable": "^5.5.0",
+        "react-router-dom": "^5.0.0",
+        "react-styleguidist": "^9.0.4",
+        "node-sass": "^4.11.0",
+        "normalize.css": "^8.0.1",
+        "amfe-flexible": "^2.2.1",
+        "prop-types": "^15.7.2"
+    }
+}
