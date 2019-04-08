@@ -40,9 +40,16 @@ const getPublicUrl = appPackageJson =>
 // We can't use a relative path in HTML because we don't want to load something
 // like /todos/42/static/js/bundle.7289d.js. We have to know the root.
 function getServedPath(appPackageJson) {
-  const publicUrl = getPublicUrl(appPackageJson);
+  // const publicUrl = getPublicUrl(appPackageJson);
+  let publicUrl = '';
+  if(process.env.ENV_DEPLOY === 'test'){
+    publicUrl = process.env.REACT_APP_DEPLOY_TEST
+  }else {
+    publicUrl = process.env.REACT_APP_DEPLOY_PRO
+  }
+
   const servedUrl =
-    envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : '/');
+    envPublicUrl || (publicUrl ? publicUrl: '/');
   return ensureSlash(servedUrl, true);
 }
 

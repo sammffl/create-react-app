@@ -96,8 +96,8 @@ module.exports = function (
   // Setup the script rules
   appPackage.scripts = {
     start: 'react-scripts start',
-    testBuild: 'PUBLIC_URL=./ GENERATE_SOURCEMAP=true react-scripts build',
-    proBuild: 'PUBLIC_URL=./ GENERATE_SOURCEMAP=false react-scripts build',
+    testBuild: 'ENV_DEPLOY=test GENERATE_SOURCEMAP=true react-scripts build',
+    proBuild: 'ENV_DEPLOY=pro GENERATE_SOURCEMAP=false react-scripts build',
     build: 'react-scripts build',
     test: 'react-scripts test',
     eject: 'react-scripts eject',
