@@ -83,7 +83,7 @@ module.exports = function (webpackEnv) {
         loader: MiniCssExtractPlugin.loader,
         options: Object.assign (
           {},
-          shouldUseRelativeAssetPaths ? {publicPath: '../../'} : undefined
+          shouldUseRelativeAssetPaths ? {publicPath: './'} : undefined
         ),
       },
       {
